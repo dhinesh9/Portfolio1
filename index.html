@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">ACHEIVEMENTS</a>
+            <a class="d" href="#">CONTACT ME</a>
+
+        </div>
+
+        <div class="content">
+
+            <div class="home">
+                <h1>I am S.Dhinesh</h1>
+                <h3>Upcoming Graphic Designer</h3>
+            </div>
+            <div class="aboutus">
+                <p><b>Hey guys,</b><br> This is <b>Dhinesh S</b> ,I was born on december 22,2000 at chennai. I completed my schooling at Don bosco mat.hr.sec. school which is in peravallur chennai.I completed my 12th standard with an average mark.</p>
+                <p>I am studying computer science engineering in panimalar institute of technology.now I am on 3rd year.I am an eager learner used to learn differnt topics, my domain is <b>Cyber Security</b>.I'll play outdoor games, read books and watch
+                    movies during my leisure time. </p>
+            </div>
+            <div class="gallery">
+                <div class="image">
+                    <img src="assets/cert1.jpg" />
+                </div>
+                <div class="image">
+                    <img src="assets/cert2.png" />
+                </div>
+                <div class="image">
+                    <img src="assets/cert3.png" />
+                </div>
+                <div class="image">
+                    <img src="assets/cert4.jpg" />
+                </div>
+            </div>
+            <div class="contactus">
+                <div class="contactform">
+                    <form action="contact.html" method="post">
+                        <input type="text" name="" class="inputtext" value="First Name">
+                        <input type="text" name="" class="inputtext" value="Last Name">
+                        <input type="text" name="" class="inputtext" value="Your Email">
+                        <textarea cols="4" rows="6" class="inputmessage">Your Messages...!!!</textarea>
+                        <input type="button" name="" class="submitbutton" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('a').click(function() {
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+
+            var $a = $('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $home = $('.home'),
+                $aboutus = $('.aboutus'),
+                $gallery = $('.gallery'),
+                $contactus = $('.contactus');
+
+            $a.click(function() {
+                $home.fadeIn();
+                $aboutus.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+            });
+            $b.click(function() {
+                $aboutus.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+            });
+            $c.click(function() {
+                $gallery.fadeIn();
+                $home.fadeOut();
+                $aboutus.fadeOut();
+                $contactus.fadeOut();
+            });
+            $d.click(function() {
+                $contactus.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $aboutus.fadeOut();
+            });
+        });
+    </script>
+</body>
+
+</html>
